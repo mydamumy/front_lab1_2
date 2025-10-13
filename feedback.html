@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Зворотній зв’язок — Дитячий навчальний портал</title>
+</head>
+
+<body>
+    <header>
+        <img src="photos/logo.webp" alt="Логотип" class="logo" />
+        <h1>Дитячий навчальний портал</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Головна</a>
+        <a href="courses.html">Наші курси</a>
+        <a href="feedback.html">Зворотній зв’язок</a>
+    </nav>
+
+    <main>
+        <h2>Зворотній зв’язок</h2>
+        <form onsubmit="event.preventDefault(); alert('Дякуємо за ваш відгук!');">
+            <fieldset>
+                <legend>Персональна інформація</legend>
+
+                <label for="parentName">Прізвище та ім’я батьків:</label>
+                <input type="text" id="parentName" name="parentName" required /><br>
+
+                <label for="parentEmail">E-mail батьків:</label>
+                <input type="email" id="parentEmail" name="parentEmail" required /><br>
+
+                <label for="childAge">Вік дитини:</label>
+                <input type="number" id="childAge" name="childAge" min="1" max="18" required /><br>
+
+                <label for="childGender">Стать дитини:</label>
+                <select id="childGender" name="childGender" required>
+                    <option value="">Оберіть</option>
+                    <option value="Чоловіча">Чоловіча</option>
+                    <option value="Жіноча">Жіноча</option>
+                    <option value="Інше">Інше</option>
+                </select>
+            </fieldset>
+
+            <label for="feedbackPurpose">Мета зворотнього зв’язку:</label>
+            <select id="feedbackPurpose" name="feedbackPurpose" required>
+                <option value="">Оберіть мету</option>
+                <option value="Співпраця">Співпраця</option>
+                <option value="Скарга на неякісний контент">Скарга на неякісний контент</option>
+                <option value="Пропозиція">Пропозиція</option>
+                <option value="Наявність помилки">Наявність помилки</option>
+            </select><br>
+
+            <label for="details">Детально:</label>
+            <textarea id="details" name="details" maxlength="300" required
+                style="width:300px; height:100px;"></textarea><br>
+
+            <label><input type="checkbox" required /> Я погоджуюсь на обробку інформації</label><br>
+
+            <button type="submit">Відправити</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2025 Дитячий навчальний портал. Всі права захищені.</p>
+    </footer>
+</body>
+
+</html>
