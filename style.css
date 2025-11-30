@@ -1,0 +1,218 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #000000; 
+    padding-bottom: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(0, 50, 100);
+    font-weight: bold;
+    display: inline-block;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+    color: hsl(210, 100%, 40%);
+}
+
+button[type="submit"] {
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+@keyframes logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+    animation: logo-spin 10s linear infinite; 
+}
+
+body.main-page header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 10;
+    border-bottom: 2px solid #ccc;
+}
+
+body.main-page {
+    padding-top: 180px; 
+}
+
+#about {
+    margin: 20px; 
+    padding: 0;  
+    border: 1px solid #ddd; 
+    background-color: #f0f0f0;
+}
+
+#about p.scroll-content {
+    height: 100px;
+    overflow-y: scroll; 
+    border: 1px solid #ddd;
+    padding: 5px; 
+}
+
+#about p::first-letter {
+    color: darkgreen; 
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#info {
+    transition: transform 0.5s ease; 
+    margin: 20px;
+}
+
+#info:hover {
+    transform: translateX(2vw);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+aside#contacts {
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin: 20px;
+    outline: none;
+    transition: box-shadow 0.3s ease 2s, background-color 0.3s ease 2s, transform 0.3s ease 2s;
+}
+
+aside#contacts:focus {
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.5); 
+    background-color: #e6ffe6; 
+    transform: scale(1.02);  
+}
+
+h2 + p {
+    font-style: italic;
+}
+
+body.courses-page header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e0f7fa;
+    z-index: 100;
+    border-bottom: 2px solid #00acc1;
+    padding: 10px;
+}
+
+body.courses-page {
+    padding-top: 180px;
+}
+
+.courses-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    padding: 20px;
+    list-style-type: none; 
+}
+
+.courses-list li {
+    background: #fff;
+    padding: 15px;
+    
+    border-top: 2px solid darkviolet;   
+    border-bottom: 2px solid darkviolet;
+    border-right: 1px solid darkviolet; 
+    border-left: 2px dashed darkviolet; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.courses-list li b {
+    font-weight: 900;    
+    font-size: 1.5em;   
+    font-style: italic;  
+    margin-bottom: 10px;
+    display: block;
+}
+
+.courses-list li img {
+    transition: filter 0.5s ease;
+    filter: saturate(100%); 
+}
+
+.courses-list li img:hover {
+    filter: saturate(150%); 
+}
+
+
+.courses-page a:visited {
+    color: darkred;
+}
+
+.courses-page .back-link button {
+    background-color: #517fff;
+}
+
+body.feedback-page main {
+    display: flex;
+    flex-flow: column nowrap; 
+    align-items: center;     
+    justify-content: center;  
+}
+
+body.feedback-page form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 500px;
+    background: #fdfdfd;
+    padding: 20px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+body.feedback-page fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #aaa;
+    margin-bottom: 15px;
+}
+
+body.feedback-page button[type="submit"] {
+    align-self: flex-end; 
+    margin-top: 10px;
+}
+
+.actions button {
+    float: left;
+    margin-left: 10px;
+}

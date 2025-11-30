@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <title>Зворотній зв’язок — Дитячий навчальний портал</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="feedback-page">
     <header>
         <img src="photos/logo.webp" alt="Логотип" class="logo" />
         <h1>Дитячий навчальний портал</h1>
@@ -25,13 +26,13 @@
                 <legend>Персональна інформація</legend>
 
                 <label for="parentName">Прізвище та ім’я батьків:</label>
-                <input type="text" id="parentName" name="parentName" required /><br>
+                <input type="text" id="parentName" name="parentName" required />
 
                 <label for="parentEmail">E-mail батьків:</label>
-                <input type="email" id="parentEmail" name="parentEmail" required /><br>
+                <input type="email" id="parentEmail" name="parentEmail" required />
 
                 <label for="childAge">Вік дитини:</label>
-                <input type="number" id="childAge" name="childAge" min="1" max="18" required /><br>
+                <input type="number" id="childAge" name="childAge" min="1" max="18" required />
 
                 <label for="childGender">Стать дитини:</label>
                 <select id="childGender" name="childGender" required>
@@ -49,13 +50,13 @@
                 <option value="Скарга на неякісний контент">Скарга на неякісний контент</option>
                 <option value="Пропозиція">Пропозиція</option>
                 <option value="Наявність помилки">Наявність помилки</option>
-            </select><br>
+            </select>
 
             <label for="details">Детально:</label>
             <textarea id="details" name="details" maxlength="300" required
-                style="width:300px; height:100px;"></textarea><br>
+                style="width:300px; height:100px;"></textarea>
 
-            <label><input type="checkbox" required /> Я погоджуюсь на обробку інформації</label><br>
+            <label><input type="checkbox" required /> Я погоджуюсь на обробку інформації</label>
 
             <button type="submit">Відправити</button>
         </form>
