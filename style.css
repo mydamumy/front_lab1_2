@@ -230,7 +230,13 @@ body.day-mode {
 
 body.night-mode {
   background-color: #e0e0e0;
-  filter: brightness(0.6);
+}
+
+body.night-mode main,
+body.night-mode footer,
+body.night-mode nav,
+body.night-mode header {
+  filter: brightness(0.7);
   transition: filter 0.5s ease;
 }
 
@@ -241,7 +247,7 @@ header {
 
 .falling-toy {
   position: absolute;
-  top: -60px;
+  top: -120px;
   animation: fall 4s linear forwards;
   z-index: 5;
   pointer-events: none;
@@ -253,7 +259,7 @@ header {
     opacity: 1;
   }
   100% {
-    transform: translateY(300px) rotate(360deg);
+    transform: translateY(360px) rotate(360deg);
     opacity: 0;
   }
 }
