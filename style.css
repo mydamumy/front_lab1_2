@@ -1,218 +1,373 @@
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #000000; 
-    padding-bottom: 50px;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  padding-bottom: 50px;
 }
 
 nav a {
-    text-decoration: none;
-    padding: 10px;
-    color: rgb(0, 50, 100);
-    font-weight: bold;
-    display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  color: rgb(0, 50, 100);
+  font-weight: bold;
+  display: inline-block;
 }
 
 nav > a:hover {
-    text-decoration: underline;
-    color: hsl(210, 100%, 40%);
+  text-decoration: underline;
+  color: hsl(210, 100%, 40%);
 }
 
 button[type="submit"] {
-    cursor: pointer;
-    background-color: green;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 @keyframes logo-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .logo {
-    width: 50px;
-    height: auto;
-    vertical-align: middle;
-    animation: logo-spin 10s linear infinite; 
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
+  animation: logo-spin 10s linear infinite;
 }
 
 body.main-page header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f4f4f4;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    z-index: 10;
-    border-bottom: 2px solid #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  z-index: 10;
+  border-bottom: 2px solid #ccc;
 }
 
 body.main-page {
-    padding-top: 180px; 
+  padding-top: 180px;
 }
 
 #about {
-    margin: 20px; 
-    padding: 0;  
-    border: 1px solid #ddd; 
-    background-color: #f0f0f0;
+  margin: 20px;
+  padding: 0;
+  border: 1px solid #ddd;
+  background-color: #f0f0f0;
 }
 
 #about p.scroll-content {
-    height: 100px;
-    overflow-y: scroll; 
-    border: 1px solid #ddd;
-    padding: 5px; 
+  height: 100px;
+  overflow-y: scroll;
+  border: 1px solid #ddd;
+  padding: 5px;
 }
 
 #about p::first-letter {
-    color: darkgreen; 
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
-    font-size: 1.5em;
-    font-weight: bold;
+  color: darkgreen;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 #info {
-    transition: transform 0.5s ease; 
-    margin: 20px;
+  transition: transform 0.5s ease;
+  margin: 20px;
 }
 
 #info:hover {
-    transform: translateX(2vw);
+  transform: translateX(2vw);
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
 }
-th, td {
-    padding: 8px;
-    border: 1px solid #ddd;
-    text-align: left;
+th,
+td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
 }
 
 aside#contacts {
-    padding: 15px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    margin: 20px;
-    outline: none;
-    transition: box-shadow 0.3s ease 2s, background-color 0.3s ease 2s, transform 0.3s ease 2s;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  margin: 20px;
+  outline: none;
+  transition: box-shadow 0.3s ease 2s, background-color 0.3s ease 2s,
+    transform 0.3s ease 2s;
 }
 
 aside#contacts:focus {
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.5); 
-    background-color: #e6ffe6; 
-    transform: scale(1.02);  
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  background-color: #e6ffe6;
+  transform: scale(1.02);
 }
 
 h2 + p {
-    font-style: italic;
+  font-style: italic;
 }
 
 body.courses-page header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #e0f7fa;
-    z-index: 100;
-    border-bottom: 2px solid #00acc1;
-    padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #e0f7fa;
+  z-index: 100;
+  border-bottom: 2px solid #00acc1;
+  padding: 10px;
 }
 
 body.courses-page {
-    padding-top: 180px;
+  padding-top: 180px;
 }
 
 .courses-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 20px;
-    padding: 20px;
-    list-style-type: none; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  list-style-type: none;
 }
 
 .courses-list li {
-    background: #fff;
-    padding: 15px;
-    
-    border-top: 2px solid darkviolet;   
-    border-bottom: 2px solid darkviolet;
-    border-right: 1px solid darkviolet; 
-    border-left: 2px dashed darkviolet; 
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  background: #fff;
+  padding: 15px;
+
+  border-top: 2px solid darkviolet;
+  border-bottom: 2px solid darkviolet;
+  border-right: 1px solid darkviolet;
+  border-left: 2px dashed darkviolet;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .courses-list li b {
-    font-weight: 900;    
-    font-size: 1.5em;   
-    font-style: italic;  
-    margin-bottom: 10px;
-    display: block;
+  font-weight: 900;
+  font-size: 1.5em;
+  font-style: italic;
+  margin-bottom: 10px;
+  display: block;
 }
 
 .courses-list li img {
-    transition: filter 0.5s ease;
-    filter: saturate(100%); 
+  transition: filter 0.5s ease;
+  filter: saturate(100%);
 }
 
 .courses-list li img:hover {
-    filter: saturate(150%); 
+  filter: saturate(150%);
 }
 
-
 .courses-page a:visited {
-    color: darkred;
+  color: darkred;
 }
 
 .courses-page .back-link button {
-    background-color: #517fff;
+  background-color: #517fff;
 }
 
 body.feedback-page main {
-    display: flex;
-    flex-flow: column nowrap; 
-    align-items: center;     
-    justify-content: center;  
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
 body.feedback-page form {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    max-width: 500px;
-    background: #fdfdfd;
-    padding: 20px;
-    border: 1px solid #eee;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 500px;
+  background: #fdfdfd;
+  padding: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 body.feedback-page fieldset {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border: 1px solid #aaa;
-    margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #aaa;
+  margin-bottom: 15px;
 }
 
 body.feedback-page button[type="submit"] {
-    align-self: flex-end; 
-    margin-top: 10px;
+  align-self: flex-end;
+  margin-top: 10px;
 }
 
 .actions button {
-    float: left;
-    margin-left: 10px;
+  float: left;
+  margin-left: 10px;
+}
+
+/* --- ЛАБОРАТОРНА РОБОТА №4 --- */
+
+body.day-mode {
+  background-color: #ffffff;
+}
+
+body.night-mode {
+  background-color: #e0e0e0;
+  filter: brightness(0.6);
+  transition: filter 0.5s ease;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+}
+
+.falling-toy {
+  position: absolute;
+  top: -60px;
+  animation: fall 4s linear forwards;
+  z-index: 5;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(300px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.flip-card:hover {
+  transform: scale(1.05);
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.is-flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flip-card-front {
+  background-color: #fff;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #003366;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.accordion-container {
+  margin: 20px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+.accordion-header {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-weight: bold;
+}
+
+.accordion-header:after {
+  content: "\002B";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion-header.active:after {
+  content: "\2212";
+}
+
+.accordion-content {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 150px;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  border-radius: 6px;
+  border-color: #000000;
+  border-style: solid;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  margin-left: 330px;
+  margin-top: 390px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+}
+
+form {
+  position: relative;
 }
