@@ -38,20 +38,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // --- ЗАВДАННЯ 3 ---
   if (window.location.pathname.includes("courses.html")) {
-    const accordionHeader = document.querySelector(".accordion-header");
+    const accHeaders = document.querySelectorAll(".accordion-header");
 
-    if (accordionHeader) {
-      accordionHeader.addEventListener("click", function () {
+    accHeaders.forEach((header) => {
+      header.addEventListener("click", function () {
+        accHeaders.forEach((otherHeader) => {
+          if (otherHeader !== this) {
+            otherHeader.classList.remove("active");
+            otherHeader.nextElementSibling.style.maxHeight = null;
+          }
+        });
+
         this.classList.toggle("active");
         const content = this.nextElementSibling;
 
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
+        if (this.classList.contains("active")) {
           content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+          content.style.maxHeight = null;
         }
       });
-    }
+    });
   }
 
   // --- ЗАВДАННЯ 4 ---
