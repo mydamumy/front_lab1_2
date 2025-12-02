@@ -355,6 +355,17 @@ header {
   transition: max-height 0.2s ease-out;
 }
 
+#details:hover {
+  background-color: #eaffd6ff;
+  border: 2px solid #000000ff;
+  box-shadow: 5px 5px 10px #00000041;
+}
+
+#details:hover + .tooltip-text {
+  opacity: 1;
+  visibility: visible;
+}
+
 .tooltip-text {
   visibility: hidden;
   width: 150px;

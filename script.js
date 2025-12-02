@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   ) {
     const header = document.querySelector("header");
 
-    // Замість зображень використовуємо емодзі бо так простіше
     const toys = ["🧸", "📚", "🧩", "⚽", "🎨"];
 
     function createFallingToy() {
@@ -14,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
       toy.innerText = toys[Math.floor(Math.random() * toys.length)];
       toy.classList.add("falling-toy");
 
-      toy.style.left = Math.random() * 90 + "%";
-      toy.style.fontSize = "4em";
+      toy.style.left = Math.random() * 100 + "%";
+      toy.style.fontSize = "64px";
 
       header.appendChild(toy);
 
@@ -62,49 +61,25 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // --- ЗАВДАННЯ 4 ---
-  if (window.location.pathname.includes("feedback.html")) {
-    const detailsField = document.getElementById("details");
-    const container = detailsField.parentElement;
+  const detailsField = document.getElementById("details");
 
+  if (detailsField) {
     const tooltip = document.createElement("span");
     tooltip.className = "tooltip-text";
     tooltip.innerText =
       "Ваша думка для нас важлива! Конкретизуйте мету звернення, будь ласка";
 
-    detailsField.parentNode.insertBefore(tooltip, detailsField.nextSibling);
-
-    detailsField.addEventListener("mouseover", function () {
-      this.style.backgroundColor = "#eaffd6ff";
-      this.style.border = "2px solid #000000ff";
-      this.style.boxShadow = "5px 5px 10px #00000041";
-
-      tooltip.style.opacity = "1";
-      tooltip.style.visibility = "visible";
-    });
-
-    detailsField.addEventListener("mouseout", function () {
-      this.style.backgroundColor = "";
-      this.style.border = "";
-      this.style.boxShadow = "";
-
-      tooltip.style.opacity = "0";
-      tooltip.style.visibility = "hidden";
-    });
+    detailsField.after(tooltip);
   }
 
   // --- ЗАВДАННЯ 5 ---
   function checkTimeAndApplyTheme() {
-    const now = new Date();
-    const hour = now.getHours();
+    const hour = new Date().getHours();
+    const isDay = hour >= 6 && hour < 21;
     const body = document.body;
 
-    if (hour >= 6 && hour < 21) {
-      body.classList.remove("night-mode");
-      body.classList.add("day-mode");
-    } else {
-      body.classList.remove("day-mode");
-      body.classList.add("night-mode");
-    }
+    body.classList.toggle("day-mode", isDay);
+    body.classList.toggle("night-mode", !isDay);
   }
   checkTimeAndApplyTheme();
 });
